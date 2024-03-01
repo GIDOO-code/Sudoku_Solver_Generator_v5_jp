@@ -1,0 +1,137 @@
+<head>
+	<meta charset="utf-8">
+	<title>sudoku GNPX5</title>
+
+
+    <!-- Prism   https://prismjs.com/download.html -->
+	<script src="prism_js_css/prism.js"></script>
+	<link rel="stylesheet" href="prism_js_css/prism.css">
+
+
+	<!-- jQuery treeview ! -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="jq_treeview/jquery.cookie.js"></script>
+	<script src="jq_treeview/jquery.treeview.js"></script>
+	<link   rel="stylesheet" href="jq_treeview/jquery.treeview.css" />
+	<link   rel="stylesheet" href="jq_treeview/screen.css" />
+	<script type="text/javascript" src="jq_treeview/cssFunction.js"></script>
+
+
+	<link rel="stylesheet" href='css/style_v5_HeaderFooter.css'>
+	<link rel="stylesheet" href="css/style_v5A_Standard.css">
+
+	<script type="text/javascript" src="js/naviHeader.js"> </script>
+	<script type="text/javascript" src="js/naviAlgorithm.js"> </script>
+    
+</head>
+
+<body id="page0">
+	<header id="head"> <strong><i>Sudoku Algorithm 5</i></strong>
+		<script type="text/javascript"> writeNaviHeader(); </script>
+	</header>
+
+<!-- -------------------------------------------------------------------------- -->
+	<article id="main">
+		<section>
+			<h3 id="head_bg_Blue">SueDeCoqEx, Franken SueDeCoq</h3>
+			<p>オリジナル SueDeCoq から、成立条件を拡張します。</p>
+			<h3 id="head_bg_LightBlue">SueDeCoqEx</h3>
+			<p>
+				SueDeCoqの仕組みは、A2LSと2つのALSを組み合わせた ”Locked” と解することができます。SueDeCoqExの成立要件は次のとおりです。
+				<ol> [SueDeCoqEx の成立条件]
+					<li>A2LSと2つのALSがある(ALS_a,ALS_b)。2つのALSに重なりはない。
+						(”重なり”条件は、外せるかもしれない。...> v5.1)
+					</li>
+					<li>A2LSとALS_aにはRCC_aがある。A2LSとALS_bにはRCC_bがある。|RCC_a|>=2、|RCC_b|>=2とする。</li>
+					<li>RCC-aとRCC-bに重なりはない。</li>
+					<li>|A2LSの数字| - 2 = |A2LSのセル|</li>
+				</ol>
+
+				数式条件は、次のことを表しています。<br>
+				A2LSとALS_aは2つ以上のRCCで連結しているので、ALS_aには必ずRCCの1個の数字があります。したがって、A2LSには残りの数字があります。
+				A2LSとALS_bについても同じです。
+				すると、A2LSに残された数字の数と、セル数が一致ます。これはA2LSが "Locked" になることを意味します。
+				従って、”A2LS,ALS_a,ALS_b"が一組の Locked" になります。<br><br>
+				<img src="images/img45_v5/image45_sdcEx_1.png" width="50%" ><br><br>
+				[SueDeCoqEx の成立条件]にみられるように、A2LS、ALSには、行・列・ブロックの条件はありません。RCCで連結してことだけが条件です。<br>
+			</p>
+			<img src="images/img45_v5/image45V5_sdcEx1.png" width="20%" style="float:left;  margin-right:8px;">
+			<strong>SueDeCoqEx</strong><br>
+			stem AnLS : r45c78 #145789<br>
+				1st ALS : r5c59 #189  RCC;#19<br>
+				2nd ALS : r68c8 #358  RCC;#58<br>
+				exclude : r4c9#9 r6c7#9 r6c9#9 r7c8#35<br>
+			<p style="clear: both" ><br>
+
+			<img src="images/img45_v5/image45V5_sdcEx2.png" width="20%" style="float:left;  margin-right:8px;">
+			<strong>SueDeCoqEx</strong><br>
+				stem AnLS : r56c2 #1235<br>
+				1st ALS : r7c2 r8c1 r9c12 #12345  RCC;#15<br>
+				2nd ALS : r6c1368 #23579  RCC;#23<br>
+				exclude : r5c1#4 r7c1#4 r7c3#4 r8c3#4 r8c9#4<br>
+			<p style="clear: both" ><br>
+
+			<img src="images/img45_v5/image45V5_sdcEx3.png" width="20%" style="float:left;  margin-right:8px;">
+			<strong>SueDeCoqEx</strong><br>
+				stem AnLS : r7c23456 #1245689<br>
+				1st ALS : r7c9 #24  RCC;#24<br>
+				2nd ALS : r5c2 r6c3 #159  RCC;#19<br>
+				exclude: r4c3#9 r7c1#24<br>
+			<p style="clear: both" >
+			<p class="newLine">
+			<small>
+			3248615976579438219185273642.143....5.32.6...4..7.....1..6.....8..1746..7..39..1.<br>
+			641..8329873291645592..4187.8..2.4.1.....92.3...41.8.6......73..6.9..51...714.968</small><br>
+			（hp"HoDoKu"の問題を使っています。）
+		</p>
+			
+			<a id="Franken_SueDeCoqEx"></a>
+			<h3 id="head_bg_LightBlue">Franken SueDeCoq</h3>
+			<p>
+				"SueDeCoqEx"は、自然な延長でさらに拡張します。<br>
+				A3LSが、互いに素な3つのALS(ALS_a,ALS_b,ALS_c)と、RCCで連結しているとします。これを <strong>"Franken SueDeCoqEx"</strong>とします。<br>
+				<ol> [Franken SueDeCoq の成立条件]
+					<li>A2LSと3つのALSがある(ALS_a,ALS_b,ALS_c)。3つのALSに重なりはない。
+						(”重なり”条件は、外せるかもしれない。...> v5.1)		
+					</li>
+					<li>A2LSとALS_aにはRCC_aがある。A2LSとALS_bにはRCC_bがある。A2LSとALS_cにはRCC_cがある。
+						|RCC_a|>=2、|RCC_b|>=2、|RCC_c|>=2とする。</li>
+					<li>RCC-a、RCC-b、RCC-cに重なりはない。</li>
+					<li>|A2LSの数字| - 3 = |A3LSのセル|</li>
+				</ol>
+				<img src="images/img45_v5/image45_sdcEx_2.png" width="50%" ><br><br>
+				Franken SueDeCoqの成立の仕組みは、SueDeCoqExと同じです。<br><br>
+				<img src="images/img45_v5/image45V5_sdcEx10.png" width="20%" style="float:left;  margin-right:8px;">
+				<strong>Franken SueDeCoqEx</strong><br>
+				stem AnLS : r7c79 r89c9 #2345789<br>
+				1st ALS : r9c7 #24  RCC;#24<br>
+				2nd ALS : r8c8 #35  RCC;#35<br>
+				3rd ALS : r4c7 r5c9 #35  RCC;#78<br>
+				exclude : r5c7#4 r7c8#345<br>
+				<p style="clear: both" ><br>
+
+				<img src="images/img45_v5/image45V5_sdcEx11.png" width="20%"  style="float:left;  margin-right:8px;">
+				<strong>Franken SueDeCoq</strong><br>
+				stem AnLS : r7c23 r8c1 r9c2 #1234589<br>
+				1st ALS : r9c1 #23  RCC;#23<br>
+				2nd ALS : r8c3 #48  RCC;#48<br>
+				3rd ALS : r46c3 r5c2 #48  RCC;#19<br>
+				exclude: r7c1#24 <br>
+			<p style="clear: both" >
+			<p class="newLine"><small>
+			3248615976579438219185273642.143....5.32.6...4..7.....1..6.....8..1746..7..39..1.<br>
+			641..8329873291645592..4187.8..2.4.1.....92.3...41.8.6......73..6.9..51...714.968</small><br>
+			（hp"HoDoKu"の問題を使っています。）</p>
+			</p>
+			<br><br>
+
+		</section>
+	</article>
+
+	<footer id="foot">
+		<p id="copyright">Copyright &copy; 2014- GNPX. All rights reserved.</p>
+	</footer>
+
+</body>
+
+</html>

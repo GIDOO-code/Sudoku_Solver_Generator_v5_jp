@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>sudoku GNPX5</title>
+
+
+    <!-- Prism   https://prismjs.com/download.html -->
+	<script src="prism_js_css/prism.js"></script>
+	<link rel="stylesheet" href="prism_js_css/prism.css">
+
+
+	<!-- jQuery treeview ! -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="jq_treeview/jquery.cookie.js"></script>
+	<script src="jq_treeview/jquery.treeview.js"></script>
+	<link   rel="stylesheet" href="jq_treeview/jquery.treeview.css" />
+	<link   rel="stylesheet" href="jq_treeview/screen.css" />
+	<script type="text/javascript" src="jq_treeview/cssFunction.js"></script>
+
+
+	<link rel="stylesheet" href='css/style_v5_HeaderFooter.css'>
+	<link rel="stylesheet" href="css/style_v5A_Standard.css">
+
+	<script type="text/javascript" src="js/naviHeader.js"> </script>
+	<script type="text/javascript" src="js/naviAlgorithm.js"> </script>
+    
+</head>
+
+<body id="page0">
+	<header id="head"> <strong><i>Sudoku Algorithm 5</i></strong>
+        <script type="text/javascript"> writeNaviHeader(); </script>
+	</header>
+
+
+<!--
+    <section id="menuList">
+        <script type="text/javascript"> writeNaviAlgorithm(); </script>
+    </section>
+
+-->
+    
+<!-- -------------------------------------------------------------------------- -->
+    <article id="main">
+        <section style="padding-top: 1.5em;">
+            <a id="Locked"></a>
+            <h3 id="head_bg_Blue">&nbsp;&nbsp;Locked</h3>
+
+            <h4 id="head_bg_LightBlue">(0)&nbsp;SuDoKu Algorithm</h4>
+            <p>
+                <strong>"Locked"</strong>は、数独解析における重要な概念です。<br>
+                <img src="images/img102/imagw102 Locked_Algorithm.png" alt="Locked" width="60%"><br>
+            </p>
+
+            <p>
+                Lockedは、セル(群）の候補数字、候補数字の数、セルの配置関係から生じる制限で、
+                候補数字が肯定的あるいは否定的に限定されます。Lockedには、いくつもの種類があります。<br><br>
+                <img src="images/img102/image102_Locked_1.png" alt="Locked" width="60%"><br><br>
+                また、Locked によって、その周辺の候補数字(群）が肯定あるいは否定になります。<br>
+                <img src="images/img102/image102_Locked_2.png" alt="Locked" width="25%"><br>
+            </p>
+
+            <h4 id="head_bg_LightBlue">(1)&nbsp;LockedSet</h4>
+            <p>
+                LockedSetは最も単純な<strong>Locked</strong>です。<a href="page33.html">( =>LockedSet )</a><br>
+                あるhouseについて、<strong>n個のセルに着目するとそれらの候補数字がn個のとき</strong>、このセル群の候補数字はLockedされます。<br><br>
+
+                n=1は、解析解析アルゴリズムの<strong>Single</strong>(Last Digit,Naked Single,Hidden Single)によって、１数字が確定した状態です。<br><br>
+                <img src="images/img102/image102-a.png" alt="Locked" width="20%"><br><br>
+
+                次の図は、”2つのセルに2つの数字”のケースで、部分的な数字の確定のケースです。
+                ”盤面のそれぞれのセルの数字を確定する”といった数独解からすると、これは解き方の１ステップです。<br>
+                実際に、これらの図の色付きセルでは、着目セルの数字は否定的に確定します。<br><br>
+                <img src="images/img102/image102-b1.png" alt="Locked" width="20%">
+                <img src="images/img102/image102-b2.png" alt="Locked" width="20%">
+                <img src="images/img102/image102-b3.png" alt="Locked" width="20%"><br>
+            </p>
+            <p>
+                次の図は、3セル3数字と4セル4数字のLockedSetです。(右図は、一部の候補数字が欠けているケース）
+                lockedしたセル群・数字は、数独盤面の中でここが肯定的に確定し、
+                グレー背景セルの数字は否定的に確定します。<br><br>
+                <img src="images/img102/image102-b4.png" alt="Locked" width="20%">
+                <img src="images/img102/image102-b5.png" alt="Locked" width="20%"><br>
+            </p>
+
+            <p>
+                また、次図では、数字の配置から導かれたセル・数字が否定的に確定します。<br>
+                <img src="images/img102/image102-b6.png" alt="Locked" width="35%"><br><br>
+
+                LockedSetによる 数独盤面の肯定的/否定的に確定する箇所がないときは、
+                lockedしたセル群では、複数の数字パターンがあることになります。
+                すなわち、”問題が解けない、あるいは数独の問題ではない(唯一解がない）”ことになります。<br><br>
+                Lockedのこのような特性は、以下で述べる他のタイプのLockedでも同じです。
+            </p>
+
+            <h4 id="head_bg_LightBlue">(2)&nbsp;Fish / GeneralLogic</h4>
+            <p>
+                Fishは、2組のhouseで生じるLockedです。<br>
+                数字Xに着目し、数字Xを最大N個(Nは次数）含むhouseをN個選び、これを<strong>BaseSet</strong>と呼びます。
+                <strong>BaseSet</strong>のHouseは重なりがないとします。
+                また、<strong>BaseSet</strong>を完全に含むように、もう1組のN個のHouseを選びます。これを<strong>CoverSet</strong>と呼びます。
+                <strong>CoverSet</strong>についてもHouseは重なりがないとします。
+                このように選んだ、<strong>BaseSet、CoverSet</strong>の共通部分はLockedとなっています。
+                (注.重なりありのタイプのLockedもある）<br><br>
+                <img src="images/img102/image102-d1.png" alt="Fish" width="70%"><br><br>
+
+                次の図のように、CoverSetに含まれ BaseSet含まれない要素(図の青三角の要素)は、否定に確定します。<br>
+                もしも、青三角要素が肯定であると、Basesetの肯定の要素が足りなくなります。
+                したがって、命題<strong>”青三角の要素は確定”</strong>は偽となります。<br>
+                <img src="images/img102/image102-d2.png" alt="Fish" width="70%"><br><br>
+
+                Fishは、次のように拡張できます。
+                <ol>
+                    <li>fishのサイズは、2～7</li>
+                    <li>BaseSet/CoverSetのhouseは、行・列・ブロックの1種類だけでなく、これらを任意に組み合わせることができる。<br>
+                        (Franken/mutant Fish)</li>
+                    <li>BaseSet/CoverSetのhouseは、行・列・ブロックに加えて”数字”に拡張できる
+                        <a href="page60.html#GeneralLogic02">(GeneralLogic)</a>
+                    </li>
+                    <li>BaseSet/Coversetは、重なりのある場合に拡張できる。(EndoFin/Cannibasatics Fish）)</li>
+                    <li>Fin付きFish</li>
+                </ol><br>
+                <img src="images/img102/image102-e1.png" alt="Fish" width="30%" ><br><br>
+                <img src="images/img102/image102-e2.png" alt="Fish" width="70%"><br><br><br>
+            </p>
+
+            <p>
+                <strong>数独アルゴリズムは（多くは？）Fishの拡張である&nbsp;<a href="page60.html#GeneralLogic02">GeneralLogic</a>&nbsp;
+                で再構成できます。
+                つまり、数独の解法アルゴリズムは、 Locked が基本となっているといえます。</strong><br><br>
+            </p>
+
+
+
+            <h4 id="head_bg_LightBlue">(3)&nbsp;ALS-XZ Doubly_Linked</h4>
+            <p>
+                <a href="page103.html">ALS</a>は、n 個のCellに(n+1) 数字が含まれる状態で、これだけでは何も確定しません。<br>
+                次図のように2つのALSが、ALSのHouseとは別のhouseで結びついているとき、共通の数字をRCC(Restricted Common Candidate)と呼びます。<br>
+                2つのALSが2つのRCCで結びついているケースを考えます。<br>
+                2つのx, y は2つのALSにそれぞれ1つづつ含まれ、一方に同時に含まれることはありません。
+                このとき、2つのALSは一体となってLockedになります。<br>
+                <br>
+                <img src="images/img102/image102_ALSXZ.png" alt="Locked" width="30%"><br><br>
+            </p>
+
+
+
+            <h4 id="head_bg_LightBlue">(4)&nbsp;SDC(SueDeCoq)</h4>
+            <p>
+                <a href="page45.html">SDC(SueDeCoq)</a>は、ALS-XZ (DoublyLink)の拡張で、2つのALSがAnLSで結びついた状態です。これも
+                数独盤面の中に存在するLockedです。<br>
+                GNPX v5 のSDCのコードは、ALS/AnLSを用いたアルゴリズムで実装しています。<br>
+                （補足：成立条件式の”-n”は、Stem AnLSに連結しているALSが n 個あることに対応する。これによってAnLSは Locked になる。）<br><br>
+                将来のバージョンでは、さらに拡張できる予感がします(v6)。<br>
+                <br>
+                <img src="images/img102/image102_SDC1.png" alt="Locked" width="60%"><br><br>
+                <img src="images/img102/image102_SDC2.png" alt="Locked" width="60%"><br><br>
+        </section>
+
+
+        <div style="text-align: center;"">
+            <a href="page101.html">menu <img src="images/imgTop/arrowL2.png" height="36"></a>
+            <a href="page103.html"><img src="images/imgTop/arrowR2.png" height="36"> ALS</a><br><br>
+        </div>
+
+    </article>
+
+<footer id="foot">
+    <p id="copyright">Copyright &copy; 2014- GNPX. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
