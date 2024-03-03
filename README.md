@@ -4,7 +4,8 @@
 以下、調整中 ##############
 
 # Sudoku_Solver_Generator
-![GNPX](/images/GNPX_start.png)
+![GNPX](/images/GNPX_start.png)<br>
+
 
 GNPX v5 は、プログラムを大幅に改良しています。
   特に、数独の解析アルゴリズム部分では、従来のコードとの連続性はありません。
