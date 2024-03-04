@@ -4,8 +4,8 @@
 以下、調整中 ##############
 
 # GNPX HP
-  en : https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/
-  jp : https://gidoo-code.github.io/Sudoku_Solver_Generator_v5_jp/
+  en : https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/<br>
+  jp : https://gidoo-code.github.io/Sudoku_Solver_Generator_v5_jp/<br>
 
 # Sudoku_Solver_Generator
 ![GNPX](./images/GNPX_start.png)<br>
