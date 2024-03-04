@@ -3,11 +3,11 @@
 
 以下、調整中 ##############
 
-# GNPX HP
-  en : https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/<br>
-  jp : https://gidoo-code.github.io/Sudoku_Solver_Generator_v5_jp/<br>
-
-# Sudoku_Solver_Generator
+# GNPX v5 HP:
+  en: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/<br>
+  jp: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5_jp/<br>
+<br><br>
+# Sudoku_Solver_Generator v5
 ![GNPX](./images/GNPX_start.png)<br>
 
 
