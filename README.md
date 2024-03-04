@@ -4,11 +4,22 @@
 以下、調整中 ##############
 
 # Sudoku_Solver_Generator
-![GNPX](/images/GNPX_start.png)<br>
+![GNPX](./images/GNPX_start.png)<br>
 
 
-GNPX v5 は、プログラムを大幅に改良しています。
-数独の解析アルゴリズム部分では、従来のコードとの連続性はありません。
+## 1. GNPX v5 は、プログラムを大幅に改良しています。<br>
+   GNPX v5 は、新アルゴリズムの開発・展開のバージョンです。スマートさは二の次です。<br>
+   数独の解析アルゴリズム部分では、従来のコードとの連続性はありません。<br>
 
-新たなアルゴリズムを開発・実装しています。
-  Franken SueDeCoq, AnLS, ALS-XZリンク, eNetwork. ...
+## 2. 数独解析アルゴリズムについて検討しました。<br>
+   論理を説明するイメージ図を用いて解説します。（具体的では本質が理解しづらい）<br>
+  (1) 数独解析における "Locked"<br>
+  (2) ALSの拡張(AnLS)、アルゴリズムの開発<br>
+  (3) Link、ネットワークの拡張<br>
+  (4) Fish の系譜<br>
+  (5) SueDeCoqの新アルゴリズム(SueDeCoqEx, Franken SueDeCoq)<br>
+  (6) DeathBlossomのアルゴリズム考察<br>
+
+## 3. GNPX v5 プログラム<br>
+  (1) 多くの解析アルゴリズムを改良<br>
+  (2) ビット表現(Bit81をUInt128に変更)<br>
