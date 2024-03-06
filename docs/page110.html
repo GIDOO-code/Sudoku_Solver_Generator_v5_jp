@@ -19,9 +19,9 @@
 	<link   rel="stylesheet" href="jq_treeview/screen.css" />
 	<script type="text/javascript" src="jq_treeview/cssFunction.js"></script>
 
-
 	<link rel="stylesheet" href='css/style_v5_HeaderFooter.css'>
 	<link rel="stylesheet" href="css/style_v5A_Standard.css">
+	<link rel="stylesheet" href='css/gotoTop.css'>
 
 	<script type="text/javascript" src="js/naviHeader.js"> </script>
 	<script type="text/javascript" src="js/naviAlgorithm.js"> </script>
@@ -258,9 +258,11 @@ static public IEnumerable<int> IEGet_rc( this UInt128 A, int mx=81){
     static public int Ceate_rcbFrameOr( this UInt128 b081 )   => b081.IEGet_rc().Aggregate( 0, (p,q) => p | rcbFrame_Value(q) );
     static public UInt128 AggregateCommonAxis( this UInt128 B) => B.IEGet_rc().Aggregate( (UInt128.One&lt;&lt;81)-1, (b,rc)=>b & pConnectedCells81[rc] );
 }
-</code></pre>	<br><br>
-</p>
+</code></pre>
+</p><br>
 
+<a href="#" class="gotop">Top</a>
+<!-- <a href="#" class="pagetop">Top</a><br><br><br><br> -->
 
         </section>
     </article>
