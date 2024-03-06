@@ -3,7 +3,7 @@ function writeNaviHeader( ){
 	html += '<nav ID="headerNav">';
 		html += '<ul>';
 			html += '<li><a href="index.html">Home(v4)</a></li>';
-			html += '<li><a href="index_v5.html">Home(v5)</a></li>';
+			html += '<li><a class="a" href="index_v5.html">Home(v5)</a></li>';
 
 			html += '<li><a href="page2.html">Sudoku Algorithm</a></li>';
 		//	html += '<li><a href="page1.html">Element Tech</a></li>';

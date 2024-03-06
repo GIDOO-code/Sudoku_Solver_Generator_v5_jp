@@ -39,7 +39,7 @@ header{
             li{
                 display: block;
                 float: left;
-                border-right: 1px solid #AAA;
+                border-right: 1px solid #b07fd5;
             }
         }
 
@@ -49,6 +49,9 @@ header{
             text-decoration: none;
             color: #0c0170;
             background: #d5cff5;
+        }
+        .a{
+            background:#bca2d5
         }
         a:hover{
             color: #CCCCFF;
