@@ -33,7 +33,7 @@ html{ scroll-behavior: smooth; }
 }
 */
 
-.gotop{
+.pagetop{
     display: block;
     width: 60px;
     height: 60px;
@@ -53,7 +53,7 @@ html{ scroll-behavior: smooth; }
     z-index: 10000;
 }
 
-.gotop::before{
+.pagetop::before{
     content: "";
     display: block;
     border-top: 2px solid #333;
@@ -68,11 +68,11 @@ html{ scroll-behavior: smooth; }
     transform: rotate(-45deg);
 }
 
-.gotop:hover{
+.pagetop:hover{
     opacity: 1;
 }
 @media(max-width:750px){
-    .gotop{
+    .pagetop{
         width: 40px;
         height: 40px;
         text-indent: -9999px;
@@ -82,7 +82,7 @@ html{ scroll-behavior: smooth; }
         bottom: 10px;
         right: 10px;
     }
-    .gotop::before{
+    .pagetop::before{
         bottom: 0;
     }
 }
