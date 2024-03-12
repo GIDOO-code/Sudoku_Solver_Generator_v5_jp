@@ -21,7 +21,7 @@
   (2) ALSの拡張(AnLS)、アルゴリズムの開発<br>
   (3) Link、ネットワークの拡張<br>
   (4) Fish の系譜<br>
-  (5) SueDeCoqの新アルゴリズム(SueDeCoqEx, Franken SueDeCoq)<br>
+  (5) SueDeCoqの新アルゴリズム( SueDeCoqEx, Franken SueDeCoq, Finned SueDeCoq )<br>
   (6) DeathBlossomのアルゴリズム考察<br>
 
 ## 3. GNPX v5 プログラム<br>
