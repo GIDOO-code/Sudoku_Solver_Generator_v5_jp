@@ -6,7 +6,7 @@
 <br><br><br>
 
 # 1. File
-![](./images/manual/Manual_10File.png)
+![](./images0/manual/Manual_10File.png)
 ## OpenPuzzle File
 数独の問題ファイルを開きます。
 ファイルフォーマットは、以下のように、空白（0または.)、数字（1-9）のテキストです。
@@ -33,7 +33,7 @@
 # 2. Solve
 現在表示中の問題を解きます。
  
-![](./images/manual/Manual_20Solve.png)
+![](./images0/manual/Manual_20Solve.png)
 
 ## 2.1 Solve / Solve
 ### Solve / Undo / SolveUp / InitialState
@@ -44,7 +44,7 @@
 上の蘭には、適用したアルゴリズム名とその詳細を示します。
 下の蘭には、ここまでのステップで適用したアルゴリズムと適用回数を示します。
 
-![](./images/manual/Manual_21Solve2.png)
+![](./images0/manual/Manual_21Solve2.png)
 
 ## 2.2 Solve / MultiSolve
 ### MultiSolve / |< / <
@@ -54,7 +54,7 @@
 - '|<’クリックで、初期局面に戻ります。
 - '<'クリックで、１ステップ前の状態に戻ります。適用可能なアルゴリズムのリストも前の状態です。
 
-![](./images/manual/Manual_22MultiSolve.png)
+![](./images0/manual/Manual_22MultiSolve.png)
 
 ## 2.3 Solve / Method
 ### Method and Order
@@ -66,7 +66,7 @@
 - アルゴリズム"GeneralLogic"の順序は固定です。全てのアルゴリズムを含む万能アルゴリズムなので、これを有効にしたときは、他のアルゴリズムは適用しません。"GeneralLogic"に関しては、HPに解説しています。
 - 'GeneralLogic'は、'Solve/MethodOption'で有効/無効に設定します。
 
-![](./images/manual/Manual_23Method.png)
+![](./images0/manual/Manual_23Method.png)
 
 ### 2.4 Solve / MethodOption
 - ALS / Max.Size : アルゴリズムで用いる ALS(Almost Locked Set) の最大サイズ。
@@ -79,7 +79,7 @@
   - GeneralLogicのサイズは、Baseset Sizeのサイズで、その最大値を指定する。
   - Rank = (Coverset Size) - (Baseset Size).
 
-![](./images/manual/Manual_24MethodOption.png)
+![](./images0/manual/Manual_24MethodOption.png)
 <br><br><br>
 
 # 3. Create
@@ -95,7 +95,7 @@
   - 生成時に、数字のランダム化を指定できます。
   - 生成時にいくつかの情報を表示します。
 
-![](./images/manual/Manual_31CreateAuto.png)
+![](./images0/manual/Manual_31CreateAuto.png)
 
 ## 3.2 Create / Manual
 - マニュアルで、数独の問題を左の9ｘ9の升目に作る.
@@ -106,7 +106,7 @@
 - New, Copy, Clear, Delete はその意味通りである。
 - 81個の数字からなる文字列（空白は0または.）は、左図内にペースト入力できる。文字列中の空白と改行は削除するので、多様なフォーマットに対応します。
 
-![](./images/manual/Manual_32CreateManual.png)
+![](./images0/manual/Manual_32CreateManual.png)
 <br><br><br>
   
 # 4. Option
@@ -117,7 +117,7 @@
   - 保存時の、フォルダー名は固定、保存ファイル名は自動で生成します。
   - いくつかのオプションがあります。
   
-![](./images/manual/Manual_40Option.png)
+![](./images0/manual/Manual_40Option.png)
 
 # 5 Transpose
 ## 5.1 Transpose/Transpose
@@ -130,7 +130,7 @@
   - 下段のボタン横の数字は、各変換方法の変換回数です。0が最初の状態です。
 - 'Save'クリックで、変換後のパズルを、保存します（システム内の保存で、外部ファイルへの保存は別途必要です）。
 
-![](./images/manual/Manual_50TransposeTranspose.png)
+![](./images0/manual/Manual_50TransposeTranspose.png)
 <br><br><br>
 
 ## 5.1 Transpose/Standardization
@@ -141,9 +141,9 @@
 - 標準形への変換は、数字変換と行・列・対象変換をコード化出来ます。
   - 数独問題を変換しても、標準形は一意であり、標準形はコードで表現できます。
 
-![](./images/manual/Manual_51TransposeStandardization.png)
+![](./images0/manual/Manual_51TransposeStandardization.png)
 <br><br><br>
 # 6 Homepage
 Jump to HP from the application.
 
-![](./images/manual/Manual_60HomePage.png)
+![](./images0/manual/Manual_60HomePage.png)

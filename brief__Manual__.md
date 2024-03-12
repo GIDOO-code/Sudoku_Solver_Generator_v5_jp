@@ -4,7 +4,7 @@
 - Compile with VisualStudio project and place the program(or alias) in SUDOKU_App folder.
 
 # 1. File
-![](./images/manual/Manual_10File.png)
+![](./images0/manual/Manual_10File.png)
 ## OpenPuzzle File
 Load sudoku puzzle file.
 The file format is a sequence of 81 digits, the puzzle is 1-9, and the space is 0/'.'.
@@ -32,7 +32,7 @@ Save the current Puzzle to a "favorite" file(SDK_Favorite.txt).
 # 2. Solve
 The left side shows the puzzle analysis status.
  
-![](./images/manual/Manual_20Solve.png)
+![](./images0/manual/Manual_20Solve.png)
 
 ## 2.1 Solve / Solve
 ### Solve / Undo / SolveUp / InitialState
@@ -43,7 +43,7 @@ The left side shows the puzzle analysis status.
 A description of the applied algorithm is shown in the box above.
 Indicates the number of applied algorithms is shown in the box bellow.
 
-![](./images/manual/Manual_21Solve2.png)
+![](./images0/manual/Manual_21Solve2.png)
 
 ## 2.2 Solve / MultiSolve
 ### MultiSolve / |< / <
@@ -55,7 +55,7 @@ Indicates the number of applied algorithms is shown in the box bellow.
 - '|<’Returns to the beginning.
 - '<' Returns to the previous state.
 
-![](./images/manual/Manual_22MultiSolve.png)
+![](./images0/manual/Manual_22MultiSolve.png)
 
 ## 2.3 Solve / Method
 ### Method and Order
@@ -71,7 +71,7 @@ Indicates the number of applied algorithms is shown in the box bellow.
   - GeneralLogic is described in more detail on HP.
   - Enable/disable of 'GeneralLogic' is set by 'Solve/MethodOption'.
 
-![](./images/manual/Manual_23Method.png)
+![](./images0/manual/Manual_23Method.png)
 
 ### 2.4 Solve / MethodOption
 - ALS / Max.Size :Maximum size of ALS(Almost Locked Set) used in the algorithm.
@@ -86,7 +86,7 @@ Indicates the number of applied algorithms is shown in the box bellow.
   - Max.Size is the maximum size of Baseset. A puzzle with Size=3 can be solved in about 1 second, while a puzzle with Size=5 takes several minutes.
   - Rank = (Coverset Size) - (Baseset Size). In GNPX, find the solution from 0 to Max.Size.
 
-![](./images/manual/Manual_24MethodOption.png)
+![](./images0/manual/Manual_24MethodOption.png)
 <br><br><br>
 
 # 3. Create
@@ -103,7 +103,7 @@ Indicates the number of applied algorithms is shown in the box bellow.
   - Indicates the status information of the trial.
   - The algorithm applied to generate the puzzle is specified during the analysis phase(Solve/Method).
  
-![](./images/manual/Manual_31CreateAuto.png)
+![](./images0/manual/Manual_31CreateAuto.png)
 
 ## 3.2 Create / Manual
 - You can handcraft the Puzzle in the square on the left.
@@ -117,7 +117,7 @@ Indicates the number of applied algorithms is shown in the box bellow.
   - '.' Is converted to 0, ignoring spaces and CRLF, so it supports puzzles of various formats.
   - This allows you to enter the numbers that appear on the HP puzzle.
 
-![](./images/manual/Manual_32CreateManual.png)
+![](./images0/manual/Manual_32CreateManual.png)
   <br><br><br>
 
 # 4. Option
@@ -129,7 +129,7 @@ Or manually choose between English and Japanese.
   - The save destination is a dedicated folder in the execution folder.
   - "Solved" and "white background" can be specified for the image type.
 
-![](./images/manual/Manual_40Option.png)
+![](./images0/manual/Manual_40Option.png)
 <br><br><br>
 
 # 5 Transpose
@@ -147,7 +147,7 @@ Transform Sudoku puzzle. The Sudoku puzzle that can be converted below is essent
 - "Save" saves the converted puzzle.
 - "To Beginning" returns to the original puzzle after various returns
 
-![](./images/manual/Manual_50TransposeTranspose.png)
+![](./images0/manual/Manual_50TransposeTranspose.png)
 
 ## 5.1 Transpose/Standardization
 Convert to Sudoku puzzle standard form.
@@ -158,10 +158,10 @@ Convert to Sudoku puzzle standard form.
   - For transformations involving row and column exchange, a matrix exchange is performed first.
 - There are hundreds of millions of puzzles that can be converted, but they can be converted into one standard form.
 
-![](./images/manual/Manual_51TransposeStandardization.png)
+![](./images0/manual/Manual_51TransposeStandardization.png)
 <br><br><br>
 
 # 6 HP
 Jump to HP from the application.
 
-![](./images/manual/Manual_60HomePage.png)
+![](./images0/manual/Manual_60HomePage.png)

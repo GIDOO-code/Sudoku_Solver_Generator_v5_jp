@@ -8,7 +8,7 @@
   jp: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5_jp/<br>
 <br><br>
 # Sudoku_Solver_Generator v5
-![GNPX](./images/GNPX_start.png)<br>
+![GNPX](./images0/GNPX_start.png)<br>
 
 
 ## 1. GNPX v5 は、プログラムを大幅に改良しています。<br>
