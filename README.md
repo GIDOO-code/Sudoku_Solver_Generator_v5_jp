@@ -2,6 +2,8 @@
   アップしました(20240301)。安定までには、しばらくかかります。５月頃、再度訪れてください。
 
 以下、調整中 ##############
+# 重大なバグによりコードの配布は停止.
+
 
 # GNPX v5 HP:
   en: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/<br>
