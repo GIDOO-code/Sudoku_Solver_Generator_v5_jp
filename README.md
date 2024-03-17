@@ -1,9 +1,8 @@
 # Sudoku_Solver_Generator_v5.0 beta
-  アップしました(20240301)。安定までには、しばらくかかります。５月頃、再度訪れてください。
+  アップデートしました(202403017)。安定までには、しばらくかかります。５月頃、再度訪れてください。
 
 以下、調整中 ##############
-# 重大なバグによりコードの配布は停止.
-
+# コードの配布 再開　-> Sudoku_Solver_Generator_v5
 
 # GNPX v5 HP:
   en: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/<br>
@@ -21,9 +20,9 @@
    論理を説明するイメージ図を用いて解説します。（具体的では本質が理解しづらい）<br>
   (1) 数独解析における "Locked"<br>
   (2) ALSの拡張(AnLS)、アルゴリズムの開発<br>
-  (3) Link、ネットワークの拡張<br>
+  (3) eLink、ネットワークの拡張<br>
   (4) Fish の系譜<br>
-  (5) SueDeCoqの新アルゴリズム( SueDeCoqEx, Franken SueDeCoq, Finned SueDeCoq )<br>
+  (5) SueDeCoq の系譜<br>
   (6) DeathBlossomのアルゴリズム考察<br>
 
 ## 3. GNPX v5 プログラム<br>
