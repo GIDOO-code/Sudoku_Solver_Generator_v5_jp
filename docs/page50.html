@@ -50,14 +50,21 @@
                 ALSを用いる解析アルゴリズムの特徴として、ALSが利用できる場面では、多くの場合に同時に多数の解が存在します。
                 また、ALS系の他の解析アルゴリズム解も存在します。ALS XZでもその性質があります。
             </P>
-                
+
             <h4 id="head_bg_LightBlue">(1)ALS XZ(Singly Linked)</h4>
             <p>2つのALSがRCC(数字x)を持つとします。また、RCCとは異なり両ALSに含まれる数字をzとします。
                 &quot;ALS外で、両ALS内の全てのzと関係する&quot;位置にあるｚは、候補から除外できます。
-                このzが真だと両方のALSをLockedSetに変えてしまい、両方のALSにRCCが含まれるからです。<br>
+                このzが真だと両方のALSをLockedSetに変えてしまい、両方のALSにRCCが含まれることになるが、これは矛盾です。<br>
                 <img src="images/img50/img50a.png" width="60%" >
             </p>
-        
+            <p><font color="blue">
+                [ver.5]<br>
+                ALS内の要素とALS外の要素の位置によって、ALS-XZ Doubly-Linked に変身することもあります。<br>
+            </font>
+                <img src="images/img50/img50c.png" width="60%" >
+            </p>
+
+
             <a id="ALS_XZ_Doubly_Linked"></a>
             <h4 id="head_bg_LightBlue">(2)ALS XZ(Doubly Linked)</h4>
             <p>2つのALSが2つのRCC(数字xy)を持つとします。このとき、2つのALSは一体となってLockedSetになります。
