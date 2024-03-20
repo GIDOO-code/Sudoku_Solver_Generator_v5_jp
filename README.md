@@ -21,8 +21,8 @@
   (1) 数独解析における "Locked"<br>
   (2) ALSの拡張(AnLS)、アルゴリズムの開発<br>
   (3) eLink、ネットワークの拡張<br>
-  (4) Fish の系譜<br>
-  (5) SueDeCoq の系譜<br>
+  (4) Fish のファミリー<br>
+  (5) SueDeCoq のファミリー<br>
   (6) DeathBlossomのアルゴリズム考察<br>
 
 ## 3. GNPX v5 プログラム<br>
