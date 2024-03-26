@@ -69,7 +69,7 @@
 			次の図では、リンク連結で真偽の制約が伝わる様子を示しています。<br>
 			左側から流入するリンクで 上から順に￢b,b,￢a,a (￢:非,not)と制約すると、右側に流出するリンクに制約が伝わります。
 			左から流入するとしましたが、右側から流入する場合にも、制約が伝搬することを確認してください。すなわち、リンク連結条件を満たす接続は双方向性を持ちます。<br><br>
-			<img src="images/img54/img54b.png" width="50%">
+			<img src="images/img54/img54b.png" width="50%" alt="リンク連結">
 		</p><br>
 
 
@@ -87,7 +87,7 @@
 			従って、&quot;弱いリンクのhouseでループ外のセル・数字&quot;(次図右△)、
 			および強いリンクが2つ接続するセル内の&quot;ループに関連しない数字&quot;(同▲)は除外できます。
 			これら(△と▲)を真とすると、連続ループ上のとが同時に偽となります。つまり△と▲に対しLockedであることがわかります。<br><br>
-			<img src="images/img54/img54d.png" width="60%">
+			<img src="images/img54/img54d.png" width="60%" alt="連続ループ">
 		</p>
 
 
@@ -112,32 +112,32 @@
 				<li>S-W、W-S : リンクの数字は異なる ⇒ （弱いリンクの数字b）着目セルは非bと確定</li>	
 				<br>
 			</ul>
-			<img src="images/img54/img54e.png" width="80%">
+			<img src="images/img54/img54e.png" width="80%" alt="不連続ループ">
 		</p>
 
 
 
 		<h4 id="head_bg_LightBlue">(5)NiceLoopの例</h4>
 		
-		<img src="images/img54/img54_10.png" width="30%"  style="float:left; margin-top:8px;">
+		<img src="images/img54/img54_10.png" width="30%"  style="float:left; margin-top:8px;" alt="Nice Loop(Continuous)">
 		<p><br>Nice Loop(Continuous)<br>
 			rc:r2c9=1=[r6c9]-1-[r6c7]-7-[r4c7]-6-[r4c9]=6=[r2c9]<br>
 			r2c9#5 is false<br>
 			<p style="clear: both"></p>
 
-		<img src="images/img54/img54_11.png" width="30%"  style="float:left; margin-top:8px;">
+		<img src="images/img54/img54_11.png" width="30%"  style="float:left; margin-top:8px;" alt="Nice Loop(Continuous)">
 		<p><br>Nice Loop(Continuous)<br>
 			rc:r1c6-6-[r9c6]-7-[r4c6]-1-[r4c9]-8-[r2c9]=8=[r2c4]-8-[r1c6]<br>
 			r6c6#7 r3c4#8 r6c9#8 is false<br>
 			<p style="clear: both"></p>
 
-		<img src="images/img54/img54_12.png" width="30%"  style="float:left; margin-top:8px;">
+		<img src="images/img54/img54_12.png" width="30%"  style="float:left; margin-top:8px;" alt="Nice Loop(Discontinuous)">
 		<p><br>Nice Loop(Discontinuous)<br>
 			rc:r9c1-1-[r1c1]=1=[r3c3]-1-[r8c3]-4-[r8c1]-1-[r9c1]<br>
 			r9c1#1 is false<br></p><br>
 		<p style="clear: both"></p>
 
-		<img src="images/img54/img54_13.png" width="30%"  style="float:left; margin-top:8px;">
+		<img src="images/img54/img54_13.png" width="30%"  style="float:left; margin-top:8px;" alt="Nice Loop(Discontinuous)">
 		<p><br>Nice Loop(Discontinuous)<br>
 			rc:r8c7-7-[r8c1]-5-[r2c1]-2-[r4c1]-7-[r6c2]=7=[r6c7]-7-[r8c7]<br>
 			r8c7#7 is false<br></p>

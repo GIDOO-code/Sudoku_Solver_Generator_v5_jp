@@ -53,7 +53,7 @@
                 これだけでは解法として成立しませんが、何かと組合せて様々な解析アルゴリズムが作れます。
                 最小のALSは、&quot;1セル2候補数字&quot;です。</p>
 
-                <img src="images/img26/img26a.png" width="512" >
+                <img src="images/img26/img26a.png" alt="ALS" width="70%" >
         </section>
 
         <section>
@@ -67,7 +67,7 @@
                 他方のALSでは偽(&quot;RCCはこのALSにない&quot;）が確定します。
                 偽となったALSでは&quot;n個のセルにn個の候補数字&quot;となり、 このALSはLockedSetになります。<br>
 
-                <img src="images/img26/img26b.png" >
+                <img src="images/img26/img26b.png" alt="ALS" width="70%">
 
                 <br>
                 次の右図は、2つのALS間にRCCが2つあるケースです（doubly linked)。
@@ -75,13 +75,13 @@
                 それぞれのALSにひとつづつあります。ただし、どのRCCがどちらのALSにあるかは、決定していません。
             </p>
 
-                <img src="images/img26/img26c.png" >
+                <img src="images/img26/img26c.png" alt="ALS RCC" width="70%">
 
             <p><br>
                 また、ALS-RCC-ALSをRCCで結ばれたALSのリンクと呼び、これを連続して繋いでALSの連が作れます。
             </p>
 
-                <img src="images/img26/img26d.png" ><br><br>
+                <img src="images/img26/img26d.png" alt="ALS Link"><br><br>
         </section>
 
         <section>
@@ -131,7 +131,7 @@
         this.LockedNoDir = null;
 
         UCellLst.ForEach( P =&gt;{
-            rcbDir |= ( (1&lt;&lt;(P.b+18)) | (1&lt;&lt;(P.c+9)) | (1&lt;&lt;(P.r)) );     
+            rcbDir |= ( (1&lt;&lt;(P.b+18)) | (1&lt;&lt;(P.c+9)) | (1&lt;&lt;(P.r)) );
             rcbFilter |= pSA.ConnectedCells[P.rc];
             B81.BPSet(P.rc);
         } );

@@ -44,7 +44,7 @@
 <!-- -------------------------------------------------------------------------- -->
     <article id="main">
         <section>
-            <h3 id="head_bg_LightBlue">&nbsp;eNetwork 解析アルゴリズム</h3>
+            <h3 id="head_bg_Blue">&nbsp;eNetwork 解析アルゴリズム</h3>
             <p>
                 従来のリンク(セル間リンク、セル内リンク、ALSリンク）を、eNetwork に置き換えると様々な数独解析アルゴリズムが作れます。
                 ネットワーク探索を分離することで、それぞれのアルゴリズムは固有の処理に専念できます。
@@ -52,7 +52,7 @@
                 リンクのタイプの拡充してもそれぞれの数独解析アルゴリズムの変更はなし/最小限とすることができます。
             </p>
 
-            <h4 id="head_bg_Blue">(1) NIceLoop</h4>
+            <h4 id="head_bg_LightBlue">(1) NIceLoop</h4>
             <p>
                 リンクのタイプを拡大し、起点ノード～起点ノードを結ぶリンク列をeNetworkに代えて、eNetwork_NiceLoopに発展させます。
                 求めたNiceLoopは同じですが、ネットワーク探索を分離したことにより、
@@ -60,7 +60,7 @@
             </p>
 
 
-            <h4 id="head_bg_Blue">(2) eNW_DeathBlossom ( eNetwork_DeathBlossom)</h4>
+            <h4 id="head_bg_LightBlue">(2) eNW_DeathBlossom ( eNetwork_DeathBlossom)</h4>
             <p>
                 DeathBlossomは、eNetwork_DeathBlossomに発展します。<br>
                 &nbsp;XYZ-Wing => DeathBlossom => ALS Death Blossom => eNetwork_DeathBlossom<br><br>
@@ -71,7 +71,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/img107/image107_FocChain_Cell.png" width="25%">
             </p>
 
-            <h4 id="head_bg_Blue">(3) ForceChain(ForceChain_Cell, ForceChain_House, ForceChain_Contradiction)</h4>
+            <h4 id="head_bg_LightBlue">(3) ForceChain(ForceChain_Cell, ForceChain_House, ForceChain_Contradiction)</h4>
             <p>
                 ForceChain系のアルゴリズムは、放射型ネットワーク探索の第2フェーズの選択と確認処理、結果のまとめです。
                 ForceChain_Contradictionは、終点ノードの状態が”肯定かつ否定”の場合です。

@@ -73,7 +73,7 @@
 				2つは、数独問題を作る方法の準備です。<br>
 				3つは、数独アプリケーションのGUIに慣れていただくことです。<br>
 				アプリケーションのGUIは、数独の解法を開発するために必ずしも必要ではありませんが、習得していると他の開発でも効率が上がるので、
-				LatinSquareExerを動かしてみてください。 
+				LatinSquareExerを動かしてみてください。
 			</p>
 				
 			<h4 id="head_bg_LightBlue">ステップ1</h4>
@@ -81,8 +81,9 @@
 				6.671x10<sup>21</sup>個のラテン方陣をそのまま作ってもよいのですが、本質的に同じものは省きたいので、ブロック1(左上ブロック)の数字を固定します。
 				これは、ブロック1の数字を{a<sub>k</sub>|k=1～9}としたとき、方陣全体に{a<sub>k</sub>→k}の変換を施すと左の方陣に変換できることによります。 
 			</p>
-		
-			<img src="images/img14/img14a.png" width="400px"><br>
+			<img src="images/img14/img14a.png" width="60%" alt="ラテン方陣"><br>
+
+
 			<h4 id="head_bg_LightBlue">ステップ2</h4>
 			<p>
 				ブロックB2とB3に入る数字を考えます。最初はブロックB2の1行目に{4,5,6}が入るケースです。{}は、順番は任意であることを表します。
@@ -93,7 +94,7 @@
 				“456,789”型は2x(3!)<sup>6</sup> = 93312通りあります。 
 			</p>
 
-			<img src="images/img14/img14b.png" width="400px"></p>
+			<img src="images/img14/img14b.png" width="60%" alt="ラテン方陣"></p>
 			<h4 id="head_bg_LightBlue">ステップ3</h4>
 			<p>
 				ブロックB2の1行目に{4,5,7}が入るケースです。このとき、B3の1行目は{6,8,9}となります。
@@ -103,7 +104,7 @@
 				{4,5,8}、{4,5,9}、{4,6,7}、{4,6,8}、{4,6,9}、{5,6,7}、{5,6,8}、{5,6,9}の
 				合計9通りあるので、“457,689”型は、2x9x3x(3!)<sup>6</sup> = 2519424通りあります。 
 			</p>
-			<img src="images/img14/img14c.png" width="400px"><br><br>
+			<img src="images/img14/img14c.png" width="60%" alt="ラテン方陣"><br><br>
 				
 			<h4 id="head_bg_LightBlue">ステップ4</h4>
 			<p>
@@ -120,7 +121,7 @@
 				実際に数えあげます。興味のある方は、先の文献をみるとよいでしょう。<br>
 				また、数独解析プログラムを持っている方は、このルーテインとつなげれば問題作成プログラムが作れます。
 			</p>
-			<img src="images/img14/latin4.jpg" width="500px"> <br><br>
+			<img src="images/img14/latin4.jpg" width="70%" alt="Latin Square App"> <br><br>
 
 
 			<h4 id="head_bg_LightBlue">数独生成アプリへの組み込みのためのTips</h4>
@@ -130,7 +131,7 @@
 				同一のラテン方陣の割合は、マスクの数が少ないほど高くなります（20～50%）<br>
 				数独の解析・生成アプリ"GNPX"では、唯一のラテン方陣から作られた候補のみを対象としています。
 			</p>
-			<img src="images/img14/img14d.png" width="500">
+			<img src="images/img14/img14d.png" width="80%">
 			<p newline>ラテン方陣（左）にマスク（中央）を適用すると、数独の問題となる。この例では赤丸箇所が異なる。</p>
 			<p class="newLine">
 		</section>

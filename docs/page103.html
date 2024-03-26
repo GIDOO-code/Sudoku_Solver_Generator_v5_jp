@@ -52,11 +52,11 @@
                 Locked Setは、同じhouseに属する&quot;n個のセルにn個の候補数字がある&quot;状態です。
                 どのセルがどの数字かは決まらないが、部分集合として確定した状態（Locked）です。
                 ALSは同じhouseに属する&quot;n個のセルにn+1個の候補数字&quot;がある&quot;ほぼLocked&quot;状態です。<br><br>
-                <img src="images/img103/image103_ALS_a1.png" width="50%" ><br>
+                <img src="images/img103/image103_ALS_a1.png" width="50%" alt="Locked Set"><br>
                 何らかの方法でALS外で数字が確定し、ALSから1数字が除かれると、ALSはLockedになります。
                 ALS単独では解法として成立しませんが、何かと組合せて様々な解析アルゴリズムが作れます。
                 最小のALSは、&quot;1セル2候補数字&quot;です。<br><br>
-                <img src="images/img103/image103_ALS_a2.png" width="50%" ><br><br>
+                <img src="images/img103/image103_ALS_a2.png" width="50%" alt="Locked Set"><br><br>
             </p>
 
 
@@ -66,7 +66,7 @@
                 ALSは、素朴な形で&quot;n個のセルにn+m個の候補数字&quot;のセル群 &nbsp;&quot;AnLS&quot;に拡張できます。<br>
                 GNPX v5 では、A2LS を用いる ALS-XZ リンクを使います。<br>
                 また、SueDeCoqの解法アルゴリズムとして AnLS を用いる方法を示します（AnLSの他に ALS, RCCを用います）。<br><br>
-                <img src="images/img103/image103_ALS_a3.png" width="50%" >
+                <img src="images/img103/image103_ALS_a3.png" width="50%" alt="AnLS">
             </p>
 
 
@@ -78,7 +78,7 @@
                 その数字をRCC (Restricted Common Candidate:制限された共通候補）と呼びます。<br><br>
                 <strong>条件:重なりのない2つのALSに共通の数字があり、それらが同じhouse内にある。<br>
                 (オレンジ点線枠、ALSのhouseとは異なる）。</strong><br><br>
-                &nbsp;<img src="images/img103/image103_ALS_b1.png" width="30%" ><br>
+                &nbsp;<img src="images/img103/image103_ALS_b1.png" width="30%" alt="ALS RCC"><br>
 
                 RCCは同じhouseに属するので、RCCは一方のALSのみ肯定であり、他方のALSではRCCは否定です。
                 ただし、どちらのALSで肯定かは決定していません。<br>
@@ -90,7 +90,7 @@
                 RCCは一方のALSにのみあります。doublylinkedの場合は2つのRCCが一方のALSに片寄ってあることはなく、
                 それぞれのALSにひとつづつあります。ただし、どのRCCがどちらのALSにあるかは、決定していません。<br>
                 doublylinkedのALS組は、一体としてLockedSetのように振舞います。<br>
-                &nbsp;<img src="images/img103/image103_ALS_b2.png" width="40%" ><br><br>
+                &nbsp;<img src="images/img103/image103_ALS_b2.png" width="40%" alt="RCC/doublylinked "><br><br>
 
                 また、AnLSでは3個以上のRCCを用いる場合もあります。<br><br>
             </p>
