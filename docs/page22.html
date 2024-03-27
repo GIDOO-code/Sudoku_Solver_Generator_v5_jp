@@ -34,7 +34,7 @@
     </header>
 	
     <section id="menuList">
-        <script type="text/javascript"> writeNaviAlgorithm(); </script>	
+        <script type="text/javascript"> writeNaviAlgorithm(); </script>
     </section>
 	
 	<!-- ========================================================================== -->
@@ -42,8 +42,8 @@
 
 	<article id="main" >
 		<secter>
-			<a id="UProblem"></a>
-			<h4 id="head_bg_LightBlue">問題のクラス(UProblem) </h4>
+			<a id="UPuzzle"></a>
+			<h4 id="head_bg_LightBlue">問題のクラス(UPuzzle) </h4>
 			<ul>
 				<li>最初の4項目は、問題の連続番号(ID)、名前(Name)、作成時刻(TimeStamp)、解読時のコメント(solMessage)で、
 					全て識別用の項目です。解析アルゴリズムには関係しません。</li><br>
@@ -56,9 +56,9 @@
 			</ul>
 
 <pre class="line-numbers" class="prismOp" >
-<code class="language-cs">public class UProblem{
+<code class="language-cs">public class UPuzzle{
 	public int     ID;
-	public string  Name; 
+	public string  Name;
 	public string  TimeStamp;
 	public string  solMessage;
 
@@ -66,25 +66,25 @@
 	public bool    Insoluble;    //解なし
 	public List&lt;UCell&gt; BDL;
 
-	public UProblem( ){
+	public UPuzzle( ){
 		ID=-1;
 		BDL = new List&lt;UCell&gt;();
 		for( int rc=0; rc&lt;81; rc++ ) BDL.Add(new UCell(rc));
 		this.DifficultyLevel = 0;
 	}
-	public UProblem( List&lt;UCell&gt; BDL ){
+	public UPuzzle( List&lt;UCell&gt; BDL ){
 		this.BDL  =  BDL;
 		this.DifficultyLevel = 0;
 	}
-	public UProblem( int ID, List&lt;UCell&gt; BDL, string Name="", int DifLvl=0 ){
+	public UPuzzle( int ID, List&lt;UCell&gt; BDL, string Name="", int DifLvl=0 ){
 		this.ID = ID;
 		this.BDL = BDL;
 		this.Name = Name;
 		this.DifficultyLevel = DifLvl;
 	}
 
-	public UProblem Copy( ){
-		UProblem SDP = (UProblem)this.MemberwiseClone();
+	public UPuzzle Copy( ){
+		UPuzzle SDP = (UPuzzle)this.MemberwiseClone();
 		SDP.BDL = new List&lt;UCell&gt;();
 		foreach( var P in BDL ) SDP.BDL.Add(P.Copy());
 		return SDP;
