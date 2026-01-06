@@ -1,11 +1,11 @@
-# Sudoku_Solver_Generator_v5.0 beta
+# Sudoku_Solver_Generator_v6.0 beta
   アップデートしました(20240418)。
 
-# コードの配布 再開　-> Sudoku_Solver_Generator_v5
+# コードの配布 再開　-> Sudoku_Solver_Generator_v6
 
 # GNPX v5 HP:
-  en: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5/<br>
-  jp: https://gidoo-code.github.io/Sudoku_Solver_Generator_v5_jp/<br>
+  en: https://gidoo-code.github.io/Sudoku_Solver_Generator_v6/<br>
+  jp: https://gidoo-code.github.io/Sudoku_Solver_Generator_v6_jp/<br>
 <br><br>
 # Sudoku_Solver_Generator v5
 ![GNPX](./images0/GNPX_start.png)<br>
